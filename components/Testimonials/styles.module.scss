@@ -1,5 +1,16 @@
-.slider {
-  margin-top: 64px;
-  width: 100%;
-  overflow: hidden;
+.contentWrapper {
+  gap: 64px;
+
+  .slider {
+    margin-top: 64px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    gap: 0px;
+    padding: 64px 0;
+  }
 }

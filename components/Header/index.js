@@ -44,10 +44,12 @@ export default function Header() {
       <App.Container>
         <App.Flex align="center" justify="space-between" height="100%">
           <App.Flex align="center" gap={8} sx={{cursor: 'pointer'}} className={styles.desktopLogo} onClick={handleClickToTop}>
-            <App.Text className={styles.logoText} sx={{fontFamily: 'monospace'}}>
+            <App.Text className={cn(styles.logoText, styles.grey)} sx={{fontFamily: 'monospace'}}>
               ALL
             </App.Text>
-            <Image src="/images/color-logo.png" width={57} height={64} alt="" />
+            <App.Flex className={styles.imageWrapper}>
+              <Image src="/images/color-logo.png" width={57} height={64} alt="" />
+            </App.Flex>
             <App.Text className={cn(styles.logoText, styles.yellow)} sx={{fontFamily: 'monospace'}}>SERVICE</App.Text>
           </App.Flex>
 
@@ -61,7 +63,7 @@ export default function Header() {
             </App.Text>
             
             <App.Text className={styles.headerLink} onClick={() => handleClickLink('form')}>
-              WRITE TO US
+              NAPISZ DO NAS
             </App.Text>
           </App.Flex>
 
@@ -77,15 +79,15 @@ export default function Header() {
 
             <App.Flex column className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
               <App.Text className={styles.mobileLink} onClick={() => handleClickLink('our-services')}>
-                OUR SERVICES
+                USŁUGI
               </App.Text>
               
               <App.Text className={styles.mobileLink} onClick={() => handleClickLink('plans')}>
-                PLANS
+                PLANY
               </App.Text>
               
               <App.Text className={styles.mobileLink} onClick={() => handleClickLink('form')}>
-                WRITE TO US
+                NAPISZ DO NAS
               </App.Text>
             </App.Flex>
           </App.Flex>

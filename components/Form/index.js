@@ -26,7 +26,7 @@ function Form() {
         <App.Flex align="center" justify="space-between" sx={{height: '100%'}} className={styles.formWrapper}>
           <App.Flex column gap={4}>
             <App.Text size={24} className={styles.title}>For instant contact</App.Text>
-            <App.Text className={styles.title}>WRITE TO US</App.Text>
+            <App.Text className={styles.title}>NAPISZ DO NAS</App.Text>
             <App.Text size={32} className={styles.title}>and make your booking</App.Text>
           </App.Flex>
           
@@ -36,21 +36,21 @@ function Form() {
                 type="text"
                 // label="Name"
                 labelFixed
-                placeholder="Your Name"
+                placeholder="Imię"
                 value={form.name}
                 onChange={(val) => handleChangeForm(val, 'name')}
               />
               <App.TextField
                 type="text"
                 labelFixed
-                placeholder="Your Email address"
+                placeholder="Email"
                 value={form.email}
                 onChange={(val) => handleChangeForm(val, 'email')}
               />
               <App.TextField
                 type="text"
                 labelFixed
-                placeholder="Your Phone number"
+                placeholder="Telefon"
                 value={form.phone}
                 onChange={(val) => handleChangeForm(val, 'phone')}
               />
@@ -65,7 +65,7 @@ function Form() {
             />
 
             <App.Button sx={{height: 64}} onClick={handleSubmit}>
-              Submit
+              Wysłać
             </App.Button>
           </App.Flex>
         </App.Flex>

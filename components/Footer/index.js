@@ -33,35 +33,37 @@ function Footer() {
 
               <App.Flex column gap={8}>
                 <App.Text className={styles.textOnDark}>
-                  <span className={styles.yellowText}>Phone:</span> +48 1231 2341 234
+                  <span className={styles.yellowText}>Telefon: </span>
+                  <a href="tel:+4812312341234">+4812312341234</a>
                 </App.Text>
 
                 <App.Text className={styles.textOnDark}>
-                  <span className={styles.yellowText}>Email:</span> info@allservice.com.pl
+                <span className={styles.yellowText}>Email: </span>
+                  <a href="mailto:info@allservice.com.pl">info@allservice.com.pl</a>
                 </App.Text>
               </App.Flex>
 
               <App.Text className={styles.textOnDark}>
-                Always ready to help!
+                Zawsze gotowy do pomocy!
               </App.Text>
             </App.Flex>
             
             <App.Flex column gap={32}>
               <App.Text sx={{letterSpacing: '.3rem', color: '#fff', fontSize: 22}}>
-                NAVIGATION
+                NAWIGACJA
               </App.Text>
 
               <App.Flex column gap={16}>
                 <App.Text className={styles.footerLink} onClick={() => handleClickLink('our-services')}>
-                  Our Services
+                  Usługi
                 </App.Text>
                 
                 <App.Text className={styles.footerLink} onClick={() => handleClickLink('plans')}>
-                  Plans
+                  Plany
                 </App.Text>
                 
                 <App.Text className={styles.footerLink} onClick={() => handleClickLink('form')}>
-                  Write To Us
+                  Napisz Do Nas
                 </App.Text>
               </App.Flex>
             </App.Flex>
@@ -72,7 +74,10 @@ function Footer() {
       <div className={styles.additionalContainer}>
         <App.Container height="100%">
           <App.Flex align="center" justify="space-between" height="100%" className={styles.footerEnd}>
-            <App.Text>© {year} ALLSERVICE. All Rights Reserved</App.Text>
+            <App.Flex column center gap={4}>
+              <App.Text>© {year} All Rights Reserved</App.Text>
+              <App.Text weight={700}>ALLSERVICE</App.Text>
+            </App.Flex>
             
             <App.Flex gap={16}>
               <App.Flex className={styles.socialLink} center>

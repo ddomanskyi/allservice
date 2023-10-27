@@ -1,8 +1,8 @@
 'use client'
 
-import styles from './styles.module.scss'
-
+import Image from 'next/image'
 import Slider from 'react-slick'
+import styles from './styles.module.scss'
 
 import App from '@/components/App'
 
@@ -10,32 +10,32 @@ const testimonials = [
   {
     title: 'Anna',
     description: 'Szybka i skuteczna obsługa! Rozwiązał mój problem hydrauliczny w mgnieniu oka.',
-    icon: 'repairs'
+    image: '/images/feedback/anna.png'
   },
   {
     title: 'Maria',
     description: 'Godni zaufania elektrycy, gorąco polecam na każde zlecenie.',
-    icon: 'plumbing'
+    image: '/images/feedback/maria.png'
   },
   {
     title: 'Katarzyna',
     description: 'Profesjonalna obsługa gazowa. Bezpieczny i doświadczony zespół.',
-    icon: 'electricity'
+    image: '/images/feedback/katarzyna.png'
   },
   {
     title: 'Agnieszka',
     description: 'Imponujące naprawy, jakość pracy zawsze na najwyższym poziomie!',
-    icon: 'gas'
+    image: '/images/feedback/agnieszka.png'
   },
   {
     title: 'Joanna',
     description: 'Szybka reakcja, doskonała obsługa hydrauliczna. Dziękujemy!',
-    icon: 'repairs'
+    image: '/images/feedback/joanna.png'
   },
   {
     title: 'Magdalena',
     description: 'Najlepsza elektryka w okolicy. Jesteśmy zachwyceni efektami.',
-    icon: 'cleaning'
+    image: '/images/feedback/magdalena.png'
   },
 ]
 
@@ -69,7 +69,7 @@ function Testimonials() {
   return (
     <App.Section>
       <App.Container sx={{height: '100%'}}>
-        <App.Flex column align="center" justify="center" sx={{height: '100%'}} gap={64}>
+        <App.Flex column align="center" justify="center" sx={{height: '100%'}} className={styles.contentWrapper}>
           <App.SectionTitle>OPINIE</App.SectionTitle>
           
           <div className={styles.slider}>
@@ -79,8 +79,8 @@ function Testimonials() {
                   return (
                     <div key={index}>
                       <App.Flex column center gap={16}>
-                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#fe1c1c'}}>
-                        
+                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#fe1c1c', overflow: 'hidden'}}>
+                          <Image src={testimonial.image} width={96} height={96} alt="" />
                         </App.Flex>
                         
                         <App.Flex column center gap={8} width="90%">
