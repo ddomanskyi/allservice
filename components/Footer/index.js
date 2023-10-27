@@ -31,7 +31,7 @@ function Footer() {
                 </App.Text>
               </App.Flex>
 
-              <App.Flex column gap={8}>
+              <App.Flex column gap={16}>
                 <App.Text className={styles.textOnDark}>
                   <span className={styles.yellowText}>Telefon: </span>
                   <a href="tel:+4812312341234">+4812312341234</a>
