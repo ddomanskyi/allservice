@@ -3,20 +3,50 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 29, 29, 29;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --yellow: #fcd01f;
+  --grey: #1d1d1d;
+  --white: #fff;
+  --font-color: #1d1d1d;
+  --light-grey: #cecece;
+  --card-bg: #fff;
+  --form-bg: #1d1d1d;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --font-color: #B9B8C5;
+    --light-grey: #1d1d1d;
+    --card-bg: #B9B8C5;
+    --form-bg: #B9B8C5;
   }
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  background: var(--grey);
+  width: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #fcd01fd5;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--yellow);
 }
 
 body {
+  height: 100%;
+  font-family: 'Montserrat', serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

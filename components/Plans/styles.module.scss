@@ -1,0 +1,99 @@
+.container {
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 128px;
+
+  .plansWrapper {
+    .planCard {
+      transition: .3s;
+  
+      &:hover {
+        transform: scale(1.1);
+        background-color: var(--yellow);
+  
+        .planButton {
+          background-color: var(--grey);
+  
+          & div {
+            color: var(--yellow);
+          }
+        }
+      }
+  
+      .planItem {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 16px;
+        border-top: .6px solid rgb(205, 205, 205);
+        
+        &:last-child {
+          border-bottom: .6px solid rgb(205, 205, 205);
+        }
+      }
+    
+      .planButton {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 51px;
+        background-color: var(--yellow);
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        transition: .3s;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: var(--yellow);
+  
+          & div {
+            color: var(--grey);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .container {  
+    .plansWrapper {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      .planCard {
+        transition: .3s;
+        width: 60%;
+    
+        &:hover {
+          transform: scale(1);
+          background-color: #fff;
+    
+          .planButton {
+            background-color: var(--yellow);
+    
+            & div {
+              color: var(--grey);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {  
+    .plansWrapper {
+      .planCard {
+        width: 100%;
+      }
+    }
+  }
+}

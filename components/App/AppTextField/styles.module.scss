@@ -1,0 +1,150 @@
+$color: #fff;
+$colorFocused: #AAA3CF;
+$colorDisabled: #AAA3CF;
+$colorError: #FF1D61;
+
+$colorPlacehoder: var(--light-grey);
+$colorText: #fff;
+$colorBorder: #242424;
+
+$borderRadius: 12px;
+
+.textField {
+  .label {
+    color: $color;
+    font-weight: 500;
+    font-family: 'Montserrat';
+    font-size: 16px;
+
+    &.label_focused {
+      color: $colorFocused;
+    }
+
+    &.label_disabled {
+      color: $colorDisabled;
+    }
+
+    &.label_error {
+      color: $colorError;
+    }
+  }
+
+  .helper {
+    font-family: 'Montserrat';
+
+    &.helper_error {
+      color: $colorError;
+    }
+  }
+
+  .input {
+    background-color: #242424;
+    border-radius: $borderRadius;
+    padding: 8px 16px;
+    
+    &.input_multiline {
+      border-radius: $borderRadius;
+    }
+
+    .input_input {
+      font-weight: 500;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      color: $colorText;
+
+      &::placeholder {
+        color: $colorPlacehoder;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        text-overflow: ellipsis !important;
+      }
+
+      &[type=number] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+
+      &[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    .input_fieldset {
+      border-color: $colorBorder;
+      border-radius: $borderRadius;
+    }
+
+    &:hover,
+    &.input_focused,
+    &.input_disabled {
+      .input_input {
+        -webkit-text-fill-color: initial;
+      }
+
+      .input_fieldset {
+        border-color: $colorBorder;
+      }
+    }
+
+    &.input_error {
+      .input_fieldset {
+        border-color: $colorError;
+      }
+    }
+  }
+
+  /* variant: search */
+  &.search {
+    .input {
+      background-color: #1C192F;
+
+      .input_fieldset {
+        border-radius: 3px;
+      }
+    }
+
+    &.notEmpty {
+      .input {
+        &:hover,
+        &.input_focused,
+        &.input_disabled {
+          .input_fieldset {
+            border-color: #311B92;
+          }
+        }
+      }
+    }
+  }
+
+  /* variant: search-light */
+  &.search-light {
+    .input {
+      background-color: #17142a;
+      width: 248px;
+      height: 48px;
+      border-radius: 8px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .input_fieldset {
+        border-radius: 8px;
+        border: 0;
+      }
+    }
+
+    &.notEmpty {
+      .input {
+        background-color: #262242;
+      }
+    }
+  }
+}
