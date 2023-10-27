@@ -74,9 +74,12 @@ function Footer() {
       <div className={styles.additionalContainer}>
         <App.Container height="100%">
           <App.Flex align="center" justify="space-between" height="100%" className={styles.footerEnd}>
-            <App.Flex column center gap={4}>
+            <App.Flex column center gap={4} className={styles.mobileVisible}>
               <App.Text>© {year} All Rights Reserved</App.Text>
               <App.Text weight={700}>ALLSERVICE</App.Text>
+            </App.Flex>
+            <App.Flex column center gap={4} className={styles.desktopVisible}>
+              <App.Text>© {year} ALLSERVICE. All Rights Reserved</App.Text>
             </App.Flex>
             
             <App.Flex gap={16}>
