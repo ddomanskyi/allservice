@@ -79,7 +79,7 @@ function Testimonials() {
                   return (
                     <div key={index}>
                       <App.Flex column center gap={16}>
-                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#fe1c1c', overflow: 'hidden'}}>
+                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#cecece', overflow: 'hidden'}}>
                           <Image src={testimonial.image} width={96} height={96} alt="" />
                         </App.Flex>
                         
