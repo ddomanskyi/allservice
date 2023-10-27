@@ -126,12 +126,12 @@
       }
       
       .mobileMenuButton span:nth-child(even) {
-        left: 50%;
+        left: 48%;
         border-radius: 0 4px 4px 0;
       }
       
       .mobileMenuButton span:nth-child(odd) {
-        left:0px;
+        left: 0px;
         border-radius: 4px 0 0 4px;
       }
       
@@ -200,9 +200,31 @@
         width: 100%;
         background-color: var(--grey);
         transition: .4s;
+        padding-top: 80px;
+        padding: 80px 0;
 
         &.isOpen {
           top: 0;
+
+          .mobileLink {
+            opacity: 1;
+            margin-top: 0;
+          }
+        }
+
+        .mobileLink {
+          color: var(--yellow);
+          font-size: 22px;
+          padding: 32px 16px;
+          border-bottom: 1px solid var(--yellow);
+          margin-top: -40px;
+          opacity: 0;
+          transition: .3s;
+          transition-delay: .3s;
+
+          &:nth-child(1) {
+            border-top: 1px solid var(--yellow);
+          }
         }
       }
     }

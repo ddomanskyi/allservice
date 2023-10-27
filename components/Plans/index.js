@@ -72,10 +72,10 @@ function Plans() {
   }
 
   return (
-    <div id="plans" className={styles.container}>
+    <App.Section id="plans">
       <App.Container sx={{height: '100%'}}>
         <App.Flex column align="center" sx={{height: '100%'}}>
-          <App.SectionTitle>CHOOSE YOUR PLAN</App.SectionTitle>
+          <App.SectionTitle>PLANY</App.SectionTitle>
           
           <App.Flex sx={{paddingTop: 64}} className={styles.plansWrapper} width="100%" gap={32}>
             {
@@ -120,7 +120,7 @@ function Plans() {
           </App.Flex>
         </App.Flex>
       </App.Container>
-    </div>
+    </App.Section>
   )
 }
 export default Plans

@@ -67,7 +67,7 @@ function Testimonials() {
   }
 
   return (
-    <div className={styles.container}>
+    <App.Section>
       <App.Container sx={{height: '100%'}}>
         <App.Flex column align="center" justify="center" sx={{height: '100%'}} gap={64}>
           <App.SectionTitle>OPINIE</App.SectionTitle>
@@ -79,7 +79,7 @@ function Testimonials() {
                   return (
                     <div key={index}>
                       <App.Flex column center gap={16}>
-                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#1d1d1d'}}>
+                        <App.Flex sx={{width: 96, height: 96, borderRadius: 48, background: '#fe1c1c'}}>
                         
                         </App.Flex>
                         
@@ -96,7 +96,7 @@ function Testimonials() {
           </div>
         </App.Flex>
       </App.Container>
-    </div>
+    </App.Section>
   )
 }
 export default Testimonials

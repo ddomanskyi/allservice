@@ -6,9 +6,9 @@ import styles from './styles.module.scss'
 
 const AppSectionTitle = ({ children, sx = {} }) => {
   return (
-    <App.Text center className={styles.sectionTitle}>
+    <App.ShadowText color="#1d1d1d" shadowColor="#fccf1e" weight={700} className={styles.sectionTitle}>
       {children}
-    </App.Text>
+    </App.ShadowText>
   )
 }
 

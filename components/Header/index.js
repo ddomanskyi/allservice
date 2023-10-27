@@ -9,10 +9,11 @@ import cn from 'classnames'
 import App from '@/components/App'
 
 export default function Header() {
-  const [pageScrolled, setPageScrolled] = useState(window?.scrollY >= 64)
+  const [pageScrolled, setPageScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   useEffect(() => {
+    handleScroll()
     window.addEventListener('scroll', handleScroll)
 
     return () => (
@@ -25,6 +26,7 @@ export default function Header() {
   }
 
   const handleClickLink = (id) => {
+    setMobileMenuOpen(! mobileMenuOpen)
     const section = document.getElementById(id)
     section.scrollIntoView({behavior: "smooth"})
   }
@@ -51,11 +53,11 @@ export default function Header() {
 
           <App.Flex className={styles.desktopMenu} gap={64}>
             <App.Text className={styles.headerLink} onClick={() => handleClickLink('our-services')}>
-              OUR SERVICES
+              USŁUGI
             </App.Text>
             
             <App.Text className={styles.headerLink} onClick={() => handleClickLink('plans')}>
-              PLANS
+              PLANY
             </App.Text>
             
             <App.Text className={styles.headerLink} onClick={() => handleClickLink('form')}>
@@ -73,8 +75,18 @@ export default function Header() {
               <span></span>
             </div>
 
-            <App.Flex className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
-
+            <App.Flex column className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
+              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('our-services')}>
+                OUR SERVICES
+              </App.Text>
+              
+              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('plans')}>
+                PLANS
+              </App.Text>
+              
+              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('form')}>
+                WRITE TO US
+              </App.Text>
             </App.Flex>
           </App.Flex>
           

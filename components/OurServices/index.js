@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './styles.module.scss'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import WaterDropIcon from '@mui/icons-material/WaterDrop'
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt'
@@ -55,10 +55,10 @@ function OurServices() {
   const handleClose = () => setOpen(false)
 
   return (
-    <div id="our-services" className={styles.container}>
+    <App.Section id="our-services">
       <App.Container sx={{height: '100%'}}>
         <App.Flex column align="center" sx={{height: '100%'}}>
-          <App.SectionTitle>OUR SERVICES</App.SectionTitle>
+          <App.SectionTitle>USŁUGI</App.SectionTitle>
           
           <App.Flex gap={42} center className={styles.servicesWrapper}>
             {
@@ -117,15 +117,15 @@ function OurServices() {
         open={open}
         onClose={handleClose}
       >
-        <App.Flex className={styles.modalContainer}>
+        <div className={styles.modalContainer}>
           <App.Flex className={styles.closeButton} onClick={handleClose}>
             <CloseIcon />
           </App.Flex>
 
           <App.Text>КОШТОРИС ЗАКАЗИВАЛІ?</App.Text>
-        </App.Flex>
+        </div>
       </Modal>
-    </div>
+    </App.Section>
   )
 }
 export default OurServices

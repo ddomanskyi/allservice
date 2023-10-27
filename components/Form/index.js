@@ -30,7 +30,7 @@ function Form() {
             <App.Text size={32} className={styles.title}>and make your booking</App.Text>
           </App.Flex>
           
-          <App.Flex column gap={16} fullWidth>
+          <App.Flex column gap={16} className={styles.form}>
             <App.Flex gap={16} className={styles.inputsWrapper}>
               <App.TextField
                 type="text"

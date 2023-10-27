@@ -18,6 +18,7 @@ import AppTooltip from '@/components/App/AppTooltip'
 import AppShadowText from '@/components/App/AppShadowText'
 import AppNumber from '@/components/App/AppNumber'
 import AppSectionTitle from '@/components/App/AppSectionTitle'
+import AppSection from '@/components/App/AppSection'
 
 export default {
   Address: AppAddress,
@@ -41,4 +42,5 @@ export default {
   ShadowText: AppShadowText,
   Number: AppNumber,
   SectionTitle: AppSectionTitle,
+  Section: AppSection,
 }
