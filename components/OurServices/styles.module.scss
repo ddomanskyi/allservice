@@ -3,10 +3,12 @@
   flex-wrap: wrap;
 
   .serviceCard {
-    flex: .3;
+    // flex: .3;
     transition: .4s;
     padding: 1rem;
     border-radius: 8px;
+    width: 30%;
+    height: 210px;
 
     &:hover {
       background-color: rgba(29, 29, 29, .2);
@@ -51,12 +53,12 @@
       .back {
         transform: rotateY(180deg);
       }
-      
     }
 
     .title {
       cursor: pointer;
       transition: .3s;
+      text-transform: uppercase;
 
       &:hover {
         color: var(--yellow);
@@ -71,12 +73,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 620px;
-  min-height: 620px;
+  height: 620px;
   background: #fff;
   border-radius: 12px;
   padding: 16px;
   position: relative;
   z-index: 0;
+  padding-top: 64px;
+  // overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  outline: none;
 
   @media (max-width: 768px) {
     width: auto;

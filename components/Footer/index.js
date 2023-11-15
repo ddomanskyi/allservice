@@ -18,6 +18,20 @@ function Footer() {
     const section = document.getElementById(id)
     section.scrollIntoView({behavior: "smooth"})
   }
+  
+  const handleClickSocial = (social) => {
+    let url = ''
+
+    switch (social) {
+      case 'facebook':
+        url = 'https://www.facebook.com/profile.php?id=61552613647039'
+        break
+      default:
+        return
+    }
+
+    window.open(url, '_blank')
+  }
 
   return (
     <>
@@ -34,7 +48,9 @@ function Footer() {
               <App.Flex column gap={16}>
                 <App.Text className={styles.textOnDark}>
                   <span className={styles.yellowText}>Telefon: </span>
-                  <a href="tel:+4812312341234">+4812312341234</a>
+                  <a href="tel:+48575649483">
+                    +48 575 649 483
+                  </a>
                 </App.Text>
 
                 <App.Text className={styles.textOnDark}>
@@ -78,15 +94,16 @@ function Footer() {
               <App.Text>© {year} All Rights Reserved</App.Text>
               <App.Text weight={700}>ALLSERVICE</App.Text>
             </App.Flex>
+            
             <App.Flex column center gap={4} className={styles.desktopVisible}>
-              <App.Text>© {year} ALLSERVICE. All Rights Reserved</App.Text>
+              <App.Text>© {year} ALLSERVICE. Wszelkie prawa zastrzeżone</App.Text>
             </App.Flex>
             
             <App.Flex gap={16}>
-              <App.Flex className={styles.socialLink} center>
+              <App.Flex className={styles.socialLink} onClick={() => handleClickSocial('facebook')} center>
                 <FacebookIcon />
               </App.Flex>
-              <App.Flex className={styles.socialLink} center>
+              {/* <App.Flex className={styles.socialLink} center>
                 <InstagramIcon />
               </App.Flex>
               <App.Flex className={styles.socialLink} center>
@@ -97,7 +114,7 @@ function Footer() {
               </App.Flex>
               <App.Flex className={styles.socialLink} center>
                 <GoogleIcon />
-              </App.Flex>
+              </App.Flex> */}
             </App.Flex>
           </App.Flex>  
         </App.Container>

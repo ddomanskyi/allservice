@@ -25,9 +25,9 @@ function Form() {
       <App.Container sx={{height: '100%'}}>
         <App.Flex align="center" justify="space-between" sx={{height: '100%'}} className={styles.formWrapper}>
           <App.Flex column gap={4}>
-            <App.Text size={24} className={styles.title}>For instant contact</App.Text>
-            <App.Text className={styles.title}>NAPISZ DO NAS</App.Text>
-            <App.Text size={32} className={styles.title}>and make your booking</App.Text>
+            {/* <App.Text size={24} className={styles.title}>For instant contact</App.Text> */}
+            <App.Text size={92} className={styles.title}>NAPISZ DO NAS</App.Text>
+            {/* <App.Text size={32} className={styles.title}>and make your booking</App.Text> */}
           </App.Flex>
           
           <App.Flex column gap={16} className={styles.form}>

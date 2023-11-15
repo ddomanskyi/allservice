@@ -1,6 +1,10 @@
 .plansWrapper {
+  padding-top: 64px;
+
   .planCard {
     transition: .3s;
+    height: 420px;
+    width: 33%;
 
     &:hover {
       transform: scale(1.1);

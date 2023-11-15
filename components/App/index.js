@@ -19,6 +19,7 @@ import AppShadowText from '@/components/App/AppShadowText'
 import AppNumber from '@/components/App/AppNumber'
 import AppSectionTitle from '@/components/App/AppSectionTitle'
 import AppSection from '@/components/App/AppSection'
+import AppTable from '@/components/App/AppTable'
 
 export default {
   Address: AppAddress,
@@ -43,4 +44,5 @@ export default {
   Number: AppNumber,
   SectionTitle: AppSectionTitle,
   Section: AppSection,
+  Table: AppTable,
 }
