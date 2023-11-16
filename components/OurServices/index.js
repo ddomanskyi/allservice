@@ -249,10 +249,6 @@ const services = [
         price: 'od 70',
       },
       {
-        name: 'Układanie paneli ściennych',
-        price: 'od 60',
-      },
-      {
         name: 'Naprawa połączeń elektrycznych',
         price: 'od 50',
       },
