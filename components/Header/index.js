@@ -77,18 +77,30 @@ export default function Header() {
               <span></span>
             </div>
 
-            <App.Flex column className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
-              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('our-services')}>
-                USŁUGI
-              </App.Text>
-              
-              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('plans')}>
-                PLANY
-              </App.Text>
-              
-              <App.Text className={styles.mobileLink} onClick={() => handleClickLink('form')}>
-                NAPISZ DO NAS
-              </App.Text>
+            <App.Flex column justify="space-between" className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
+              <App.Flex column>
+                <App.Text className={styles.mobileLink} onClick={() => handleClickLink('our-services')}>
+                  USŁUGI
+                </App.Text>
+                
+                <App.Text className={styles.mobileLink} onClick={() => handleClickLink('plans')}>
+                  PLANY
+                </App.Text>
+                
+                <App.Text className={styles.mobileLink} onClick={() => handleClickLink('form')}>
+                  NAPISZ DO NAS
+                </App.Text>
+              </App.Flex>
+
+              <App.Flex column align="center" className={styles.socialsMobile} gap={16}>
+                <App.Text className={styles.phone}>
+                  <a href="tel:+48575649483">
+                    +48 575 649 483
+                  </a>
+                </App.Text>
+
+                <App.Socials variant="header" />
+              </App.Flex>
             </App.Flex>
           </App.Flex>
           

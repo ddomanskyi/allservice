@@ -184,6 +184,10 @@
       }
     }
 
+    .socials {
+      display: none;
+    }
+
     .mobileMenu {
       display: flex;
 
@@ -298,12 +302,25 @@
         padding-top: 80px;
         padding: 80px 0;
 
+        .socialsMobile {
+          opacity: 0;
+          transition: .4s;
+          transition-delay: .3s;
+          .phone {
+            color: var(--yellow);
+          }
+        }
+
         &.isOpen {
           top: 0;
 
           .mobileLink {
             opacity: 1;
             margin-top: 0;
+          }
+
+          .socialsMobile {
+            opacity: 1;
           }
         }
 

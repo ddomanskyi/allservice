@@ -472,7 +472,7 @@ function OurServices() {
           </App.Flex>
 
           <App.Flex align="center" justify="space-between">
-            <App.Text center size={24} weight={700} sx={{textTransform: 'uppercase'}}>
+            <App.Text center size={24} weight={700} className={styles.modailTitle} sx={{textTransform: 'uppercase'}}>
               Usługi {selected.title}
             </App.Text>
 

@@ -126,6 +126,7 @@
     width: auto;
     height: 100%;
     padding: 16px 6px;
+    padding-top: 32px;
     background: var(--light-grey);
     border-radius: 4px;
  
@@ -133,6 +134,14 @@
       top: 0;
       right: 0;
       padding: 8px;
+    }
+
+    .modailTitle {
+      text-align: left;
+    }
+
+    .phone {
+      width: 117px;
     }
   }
 }
