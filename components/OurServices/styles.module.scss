@@ -20,6 +20,30 @@
       }
     }
 
+    @media (max-width: 768px) {
+      width: 100%;
+      background-color: rgba(29, 29, 29);
+
+      &:hover {
+        background-color: var(--yellow);
+  
+        .iconContainer {
+          transform: rotateY(180deg);
+          background-color: var(--grey);
+        }
+      }
+
+      .title {
+        color: var(--yellow);
+      }
+
+      .front {
+        svg path {
+          fill: var(--grey);
+        }
+      }
+    }
+
     .iconContainer {
       background-color: var(--yellow);
       border-radius: 50%;
@@ -86,10 +110,6 @@
   gap: 16px;
   text-align: center;
   outline: none;
-
-  @media (max-width: 768px) {
-    width: auto;
-  }
   
   .closeButton {
     position: absolute;
@@ -98,5 +118,21 @@
     right: 16px;
     padding: 8px;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .modalContainer {
+    width: auto;
+    height: 100%;
+    padding: 16px 6px;
+    background: var(--light-grey);
+    border-radius: 4px;
+ 
+    .closeButton {
+      top: 0;
+      right: 0;
+      padding: 8px;
+    }
   }
 }

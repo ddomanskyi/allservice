@@ -23,6 +23,10 @@
         }
       }
     }
+
+    .socials {
+      opacity: 1;
+    }
   }
 
   .desktopLogo {
@@ -112,13 +116,28 @@
   .mobileMenu {
     display: none;
   }
-}
 
-@media (max-width: 1530px) {
-  .filler {
-    display: none;
+  .socials {
+    opacity: 0;
+    transition: .4s;
+    
+    .phone {
+      color: var(--yellow);
+      cursor: pointer;
+      transition: .3s;
+
+      &:hover {
+        color: var(--white);
+      }
+    }
   }
 }
+
+// @media (max-width: 1530px) {
+//   .socials {
+//     display: none;
+//   }
+// }
 
 @media (max-width: 991px) {
   .headerContainer {

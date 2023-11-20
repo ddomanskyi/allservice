@@ -15,6 +15,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
   [`&.${tableCellClasses.body}`]: {
     fontSize: 14,
+    padding: '16px 6px',
     // color: '#fff'
   },
 }));
@@ -47,8 +48,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function AppTable({rows}) {
   return (
-    <TableContainer component={Paper} sx={{maxHeight: 520}}>
-      <Table sx={{ minWidth: 420 }} stickyHeader>
+    <TableContainer component={Paper} sx={{maxHeight: {xs: '100%', md: 520}}}>
+      <Table sx={{ minWidth: {md: 420, xs: 'auto'} }}  stickyHeader>
         <TableHead>
           <TableRow>
             <StyledTableCell>Nazwa usługi</StyledTableCell>

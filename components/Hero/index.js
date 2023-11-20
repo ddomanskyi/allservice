@@ -8,7 +8,7 @@ import App from '@/components/App'
 
 function Hero() {
   return (
-      <Parallax bgImage="/images/hero-bg.jpg" bgImageAlt="" strength={-200} className={styles.parallax}>
+      <Parallax bgImage="/images/hero-bg.jpg" bgImageAlt="" bgImageStyle={{objectFit: 'cover'}} strength={-200} className={styles.parallax}>
         <div className={styles.heroContainer}>
           <App.Flex className={styles.blurBg} />
           
@@ -20,11 +20,13 @@ function Hero() {
                 Małe naprawy - duże zmiany: <br /> Twoja przestrzeń w pewnych rękach.
               </App.Text>
 
-              <a href="tel:+48575649483">
-                <App.Text className={styles.heroPhone}>
+              <App.Text className={styles.heroPhone}>
+                <a href="tel:+48575649483">
                   +48 575 649 483
-                </App.Text>
-              </a>
+                </a>
+              </App.Text>
+
+              <App.Socials variant="hero" />
               
             </App.Flex>
           </App.Container>

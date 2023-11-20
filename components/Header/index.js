@@ -92,7 +92,15 @@ export default function Header() {
             </App.Flex>
           </App.Flex>
           
-          <App.Flex className={styles.filler} sx={{flex: .3}}></App.Flex>
+          <App.Flex align="center" className={styles.socials} gap={16}>
+            <App.Text className={styles.phone}>
+              <a href="tel:+48575649483">
+                +48 575 649 483
+              </a>
+            </App.Text>
+
+            <App.Socials variant="header" />
+          </App.Flex>
         </App.Flex>
       </App.Container>
     </App.Flex>

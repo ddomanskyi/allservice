@@ -2,6 +2,7 @@
 
 import styles from './styles.module.scss'
 import { useState } from 'react'
+import Image from 'next/image'
 
 import WaterDropIcon from '@mui/icons-material/WaterDrop'
 import ElectricBoltIcon from '@mui/icons-material/ElectricBolt'
@@ -413,13 +414,13 @@ function OurServices() {
             {
               services.map((service, index) => {
                 return (
-                  <App.Flex key={index} column center gap={16} className={styles.serviceCard}>
+                  <App.Flex key={index} column center gap={16} className={styles.serviceCard} onClick={() => handleOpen(service)}>
                     <App.Flex center className={styles.iconContainer}>
                       <App.Flex center className={styles.front}>
                         {service.icon}
                       </App.Flex>
 
-                      <App.Flex center className={styles.back} onClick={() => handleOpen(service)}>
+                      <App.Flex center className={styles.back}>
                         <DescriptionIcon sx={{color: '#fff', fontSize: 42}} />
                       </App.Flex>
                     </App.Flex>
@@ -470,9 +471,28 @@ function OurServices() {
             <CloseIcon />
           </App.Flex>
 
-          <App.Text center size={24} weight={700} sx={{textTransform: 'uppercase'}}>
-            Usługi {selected.title}
-          </App.Text>
+          <App.Flex align="center" justify="space-between">
+            <App.Text center size={24} weight={700} sx={{textTransform: 'uppercase'}}>
+              Usługi {selected.title}
+            </App.Text>
+
+            <App.Flex align="center" gap={8}>
+              <App.Flex column align="flex-end">
+                <App.Text className={styles.phone}>
+                  <a href="tel:+48575649483">
+                    +48 575 649 483
+                  </a>
+                </App.Text>
+
+                <App.Socials variant="modal" />
+              </App.Flex>
+
+              <App.Flex column center>
+                <Image src="/images/color-logo.png" width={57} height={64} alt="" />
+                <App.Text weight={800} size={9}>ALLSERVICE</App.Text>
+              </App.Flex>
+            </App.Flex>
+          </App.Flex>
 
           {
             selected.services

@@ -2,12 +2,6 @@
 
 import styles from './styles.module.scss'
 
-import FacebookIcon from '@mui/icons-material/Facebook'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import TwitterIcon from '@mui/icons-material/Twitter'
-import YouTubeIcon from '@mui/icons-material/YouTube'
-import GoogleIcon from '@mui/icons-material/Google'
-
 import App from '@/components/App'
 
 function Footer() {
@@ -25,6 +19,12 @@ function Footer() {
     switch (social) {
       case 'facebook':
         url = 'https://www.facebook.com/profile.php?id=61552613647039'
+        break
+      case 'whatsapp':
+        url = 'https://wa.me/48575649483'
+        break
+      case 'telegram':
+        url = 'https://t.me/+48575649483'
         break
       default:
         return
@@ -99,23 +99,7 @@ function Footer() {
               <App.Text>© {year} ALLSERVICE. Wszelkie prawa zastrzeżone</App.Text>
             </App.Flex>
             
-            <App.Flex gap={16}>
-              <App.Flex className={styles.socialLink} onClick={() => handleClickSocial('facebook')} center>
-                <FacebookIcon />
-              </App.Flex>
-              {/* <App.Flex className={styles.socialLink} center>
-                <InstagramIcon />
-              </App.Flex>
-              <App.Flex className={styles.socialLink} center>
-                <TwitterIcon />
-              </App.Flex>
-              <App.Flex className={styles.socialLink} center>
-                <YouTubeIcon />
-              </App.Flex>
-              <App.Flex className={styles.socialLink} center>
-                <GoogleIcon />
-              </App.Flex> */}
-            </App.Flex>
+            <App.Socials variant="footer" />
           </App.Flex>  
         </App.Container>
       </div>

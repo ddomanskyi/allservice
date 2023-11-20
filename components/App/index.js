@@ -20,6 +20,7 @@ import AppNumber from '@/components/App/AppNumber'
 import AppSectionTitle from '@/components/App/AppSectionTitle'
 import AppSection from '@/components/App/AppSection'
 import AppTable from '@/components/App/AppTable'
+import AppSocials from '@/components/App/AppSocials'
 
 export default {
   Address: AppAddress,
@@ -45,4 +46,5 @@ export default {
   SectionTitle: AppSectionTitle,
   Section: AppSection,
   Table: AppTable,
+  Socials: AppSocials,
 }
