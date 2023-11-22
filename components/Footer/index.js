@@ -70,7 +70,7 @@ function Footer() {
               </App.Text>
 
               <App.Flex column gap={16}>
-                <App.Text className={styles.footerLink} onClick={() => handleClickLink('our-services')}>
+                <App.Text className={styles.footerLink} onClick={() => handleClickLink('services')}>
                   Usługi
                 </App.Text>
                 

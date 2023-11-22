@@ -405,7 +405,7 @@ function OurServices() {
   }
 
   return (
-    <App.Section id="our-services">
+    <App.Section id="services">
       <App.Container sx={{height: '100%'}}>
         <App.Flex column align="center" sx={{height: '100%'}}>
           <App.SectionTitle>USŁUGI</App.SectionTitle>

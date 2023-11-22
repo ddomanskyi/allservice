@@ -1,6 +1,6 @@
 
 import './globals.css'
-import amplitude from 'amplitude-js'
+import * as amplitude from '@amplitude/analytics-browser'
 
 export const metadata = {
   title: 'ALLSERVICE',
@@ -9,7 +9,9 @@ export const metadata = {
 
 const gaId = 'G-2HXX807M4Q'
 
-amplitude.getInstance().init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY)
+amplitude.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, {
+  serverZone: 'EU',
+});
 
 export default function RootLayout({ children }) {
   return (

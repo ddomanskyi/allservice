@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import { v4 as uuid } from 'uuid'
-import amplitude from 'amplitude-js'
+import * as amplitude from '@amplitude/analytics-browser'
 
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -25,10 +26,10 @@ export default function Home() {
       deviceId = uuid()
       localStorage.setItem('device_id', deviceId)
     }
+
     identifyObj.set('device_id', deviceId)
     amplitude.identify(identifyObj)
-
-    amplitude.getInstance().logEvent('Landing page viewed!')
+    amplitude.track('Landing page viewed!');
   }, [])
 
   return (

@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "^2.3.5",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.14",
-    "amplitude-js": "^8.21.9",
     "classnames": "^2.3.2",
     "fs": "^0.0.1-security",
     "next": "13.5.5",

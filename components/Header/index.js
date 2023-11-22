@@ -54,7 +54,7 @@ export default function Header() {
           </App.Flex>
 
           <App.Flex className={styles.desktopMenu} gap={64}>
-            <App.Text className={styles.headerLink} onClick={() => handleClickLink('our-services')}>
+            <App.Text className={styles.headerLink} onClick={() => handleClickLink('services')}>
               USŁUGI
             </App.Text>
             
@@ -79,7 +79,7 @@ export default function Header() {
 
             <App.Flex column justify="space-between" className={cn(styles.mobileMenuSheet, {[styles.isOpen]: mobileMenuOpen})}>
               <App.Flex column>
-                <App.Text className={styles.mobileLink} onClick={() => handleClickLink('our-services')}>
+                <App.Text className={styles.mobileLink} onClick={() => handleClickLink('services')}>
                   USŁUGI
                 </App.Text>
                 
