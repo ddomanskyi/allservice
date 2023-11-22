@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePathname } from 'next/navigation'
 import { v4 as uuid } from 'uuid'
 import * as amplitude from '@amplitude/analytics-browser'
 
@@ -15,6 +14,8 @@ import Footer from '@/components/Footer'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+
+amplitude.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY)
 
 export default function Home() {
   useEffect(() => {
