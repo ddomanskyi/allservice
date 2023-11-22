@@ -1,3 +1,9 @@
+'use client'
+
+import { useEffect } from 'react'
+import { v4 as uuid } from 'uuid'
+import amplitude from 'amplitude-js'
+
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import OurServices from '@/components/OurServices'
@@ -10,6 +16,21 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 export default function Home() {
+  useEffect(() => {
+    const identifyObj = new amplitude.Identify()
+
+    let deviceId = localStorage.getItem('device_id')
+      
+    if (!deviceId) {
+      deviceId = uuid()
+      localStorage.setItem('device_id', deviceId)
+    }
+    identifyObj.set('device_id', deviceId)
+    amplitude.identify(identifyObj)
+
+    amplitude.getInstance().logEvent('Landing page viewed!')
+  }, [])
+
   return (
     <>
       <Header />

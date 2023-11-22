@@ -6,10 +6,7 @@
   .formWrapper {
     .title {
       color: var(--light-grey);
-
-      &:nth-child(2) {
-        font-size: 92px;
-      }
+      font-size: 92px;
     }
   }
 }
@@ -38,15 +35,7 @@
         text-align: center;
         color: var(--light-grey);
         width: 100%;
-        
-        &:nth-child(2) {
-          font-size: 62px;
-        }
-        
-        &:nth-child(1),
-        &:nth-child(3) {
-          display: none;
-        }
+        font-size: 62px;
       }
 
       .form {
