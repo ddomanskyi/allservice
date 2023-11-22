@@ -18,20 +18,22 @@ import 'slick-carousel/slick/slick-theme.css'
 amplitude.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY)
 
 export default function Home() {
-  useEffect(() => {
-    const identifyObj = new amplitude.Identify()
-
-    let deviceId = localStorage.getItem('device_id')
-      
-    if (!deviceId) {
-      deviceId = uuid()
-      localStorage.setItem('device_id', deviceId)
-    }
-
-    identifyObj.set('device_id', deviceId)
-    amplitude.identify(identifyObj)
-    amplitude.track('Landing page viewed!');
-  }, [])
+  if (typeof window) {
+    useEffect(() => {
+      const identifyObj = new amplitude.Identify()
+  
+      let deviceId = localStorage.getItem('device_id')
+        
+      if (!deviceId) {
+        deviceId = uuid()
+        localStorage.setItem('device_id', deviceId)
+      }
+  
+      identifyObj.set('device_id', deviceId)
+      amplitude.identify(identifyObj)
+      amplitude.track('Landing page viewed!');
+    }, [])
+  }
 
   return (
     <>
