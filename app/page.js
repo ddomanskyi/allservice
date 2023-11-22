@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { v4 as uuid } from 'uuid'
-import * as amplitude from '@amplitude/analytics-browser'
+import * as amplitude from '@amplitude/analytics-node'
 
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -15,25 +15,24 @@ import Footer from '@/components/Footer'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-amplitude.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY)
+amplitude.init(process.env.NEXT_PUBLIC_AMPLITUDE_API_KEY, {
+  logLevel: amplitude.Types.LogLevel.Debug,
+})
 
 export default function Home() {
-  if (typeof window) {
-    useEffect(() => {
-      const identifyObj = new amplitude.Identify()
-  
-      let deviceId = localStorage.getItem('device_id')
-        
-      if (!deviceId) {
-        deviceId = uuid()
-        localStorage.setItem('device_id', deviceId)
-      }
-  
-      identifyObj.set('device_id', deviceId)
-      amplitude.identify(identifyObj)
-      amplitude.track('Landing page viewed!');
-    }, [])
-  }
+  useEffect(() => {
+    const identifyObj = new amplitude.Identify()
+
+    let deviceId = localStorage.getItem('device_id')
+      
+    if (!deviceId) {
+      deviceId = uuid()
+      localStorage.setItem('device_id', deviceId)
+    }
+
+    identifyObj.set('device_id', deviceId)
+    amplitude.identify(identifyObj, {device_id: deviceId})
+  }, [])
 
   return (
     <>

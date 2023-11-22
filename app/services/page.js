@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import * as amplitude from '@amplitude/analytics-browser'
+import { trackEvent } from "@/lib/analytics"
 
 export default function Services() {
   const router = useRouter()
@@ -12,8 +12,7 @@ export default function Services() {
     router.push('/#services')
     
     if (searchParams.get('source') === 'flyer') {
-      console.log('searchParams', searchParams.get('source'));
-      amplitude.track('Navigated from the flyer!');
+      trackEvent('Navigated from the flyer!');
     }
   }, [])
 
