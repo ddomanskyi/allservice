@@ -7,8 +7,14 @@ import App from '@/components/App'
 
 function Form() {
   const [form, setForm] = useState({name: '', email: '', phone: '', message: ''})
+  const [error, setError] = useState({email: false, phone: false})
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleChangeForm = (val, field) => {
+    setError(state => ({
+      ...state,
+      [field]: false
+    }))
     setForm(state => ({
       ...state,
       [field]: val
@@ -16,15 +22,31 @@ function Form() {
   }
 
   const handleSubmit = async () => {
-    console.log('SUBMIT!', form);
-    const response = await fetch('/api/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(form),
-    });
-    // setForm({name: '', email: '', phone: '', message: ''})
+    setIsLoading(true)
+    const isValid = await handleValidate(form)
+    
+    if (isValid) {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+      setForm({name: '', email: '', phone: '', message: ''})
+    }
+    setIsLoading(false)
+  }
+
+  const handleValidate = async form => {
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)
+    const isValidPhone = /^[0-9]{9}$/.test(form.phone.replace(/\s/g, ''))
+    setError(state => ({
+      ...state,
+      email: ! isValidEmail ? 'Wprowadź poprawny email' : isValidEmail,
+      // phone: ! isValidPhone ? 'Wprowadź poprawny telefon' : isValidPhone
+    }))
+    return isValidEmail
   }
   
   return (
@@ -49,6 +71,7 @@ function Form() {
                 labelFixed
                 placeholder="Email"
                 value={form.email}
+                error={error.email}
                 onChange={(val) => handleChangeForm(val, 'email')}
               />
               <App.TextField
@@ -56,6 +79,7 @@ function Form() {
                 labelFixed
                 placeholder="Telefon"
                 value={form.phone}
+                error={error.phone}
                 onChange={(val) => handleChangeForm(val, 'phone')}
               />
             </App.Flex>
@@ -69,7 +93,11 @@ function Form() {
             />
 
             <App.Button sx={{height: 64}} onClick={handleSubmit}>
-              Wysłać
+              {
+                isLoading
+                  ? <App.Loader color="#212121" size={30} />
+                  : 'Wysłać'
+              }
             </App.Button>
           </App.Flex>
         </App.Flex>

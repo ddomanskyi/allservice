@@ -15,7 +15,6 @@ function Hero() {
           <App.Container sx={{height: '100%'}}>
             <App.Flex column center sx={{height: '100%'}} gap={16}>
               <App.Text className={styles.heroTitle}>ALLSERVICE</App.Text>
-              
               <App.Text className={styles.heroSubtitle}>
                 Małe naprawy - duże zmiany: <br /> Twoja przestrzeń w pewnych rękach.
               </App.Text>
@@ -27,7 +26,6 @@ function Hero() {
               </App.Text>
 
               <App.Socials variant="hero" />
-              
             </App.Flex>
           </App.Container>
         </div>
