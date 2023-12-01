@@ -378,6 +378,10 @@ const services = [
         price: 'od 18 / m²',
       },
       {
+        name: 'Gruntowanie ścian, sufitów, podłóg',
+        price: 'od 7 / m²',
+      },
+      {
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
