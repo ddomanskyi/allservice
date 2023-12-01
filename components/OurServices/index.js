@@ -335,7 +335,7 @@ const services = [
       },
       {
         name: 'Zabezpieczenie mieszkania podczas malowania',
-        price: 'od 3 / m',
+        price: 'od 5 / m',
       },
       {
         name: 'Podkładanie ścian i sufitów',
