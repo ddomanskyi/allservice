@@ -374,7 +374,7 @@ const services = [
         price: 'od 10 / szt.',
       },
       {
-        name: 'Zrywanie Tapetu',
+        name: 'Zrywanie tapetu',
         price: 'od 18 / m²',
       },
       {
