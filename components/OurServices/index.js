@@ -315,7 +315,7 @@ const services = [
     services: [
       {
         name: 'Malowanie ścian',
-        price: 'od 10 / m²',
+        price: 'od 20 / m²',
       },
       {
         name: 'Malowanie drzwi (dwa warstwy)',
@@ -372,6 +372,10 @@ const services = [
       {
         name: 'Demontaż progu',
         price: 'od 10 / szt.',
+      },
+      {
+        name: 'Zrywanie Tapetu',
+        price: 'od 18 / m²',
       },
       {
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
