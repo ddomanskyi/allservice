@@ -87,7 +87,7 @@ function Form() {
             <App.TextField
               multiline
               rows={6}
-              placeholder="Message"
+              placeholder="Treść wiadomości"
               value={form.message}
               onChange={(val) => handleChangeForm(val, 'message')}
             />
@@ -96,7 +96,7 @@ function Form() {
               {
                 isLoading
                   ? <App.Loader color="#212121" size={30} />
-                  : 'Wysłać'
+                  : 'Wyślij'
               }
             </App.Button>
           </App.Flex>

@@ -93,6 +93,10 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
+        price: 'od 100',
+      },
     ]
   },
   {
@@ -207,6 +211,10 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
+        price: 'od 100',
+      },
     ]
   },
   {
@@ -219,7 +227,7 @@ const services = [
       },
       {
         name: 'Wykonanie rowka pod kabel',
-        price: 'od 5 / m',
+        price: 'od 40 / m',
       },
       {
         name: 'Wymiana automatycznego wyłącznika',
@@ -273,6 +281,10 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
+        price: 'od 100',
+      },
     ]
   },
   {
@@ -305,6 +317,10 @@ const services = [
       },
       {
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
+        price: 'od 100',
+      },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
         price: 'od 100',
       },
     ]
@@ -382,7 +398,15 @@ const services = [
         price: 'od 7 / m²',
       },
       {
+        name: 'Naprawa wad na całej powierzchni przed malowaniem od',
+        price: 'od 20 m²',
+      },
+      {
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
+        price: 'od 100',
+      },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
         price: 'od 100',
       },
     ]
@@ -394,6 +418,10 @@ const services = [
       {
         name: 'Sprzątanie standardowe',
         price: '3.5 / m²',
+      },
+      {
+        name: 'Minimalne zamówienie dla specjalisty',
+        price: 'od 100',
       },
     ]
   },
