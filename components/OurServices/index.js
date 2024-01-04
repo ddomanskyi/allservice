@@ -93,10 +93,6 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
-        price: 'od 100',
-      },
     ]
   },
   {
@@ -211,10 +207,6 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
-        price: 'od 100',
-      },
     ]
   },
   {
@@ -281,10 +273,6 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
-        price: 'od 100',
-      },
     ]
   },
   {
@@ -317,10 +305,6 @@ const services = [
       },
       {
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
-        price: 'od 100',
-      },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
         price: 'od 100',
       },
     ]
@@ -405,10 +389,6 @@ const services = [
         name: 'Brak na liście napraw do uzgodnienia z specjalistą',
         price: 'od 100',
       },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
-        price: 'od 100',
-      },
     ]
   },
   {
@@ -418,10 +398,6 @@ const services = [
       {
         name: 'Sprzątanie standardowe',
         price: '3.5 / m²',
-      },
-      {
-        name: 'Minimalne zamówienie dla specjalisty',
-        price: 'od 100',
       },
     ]
   },
@@ -508,9 +484,15 @@ function OurServices() {
           </App.Flex>
 
           <App.Flex align="center" justify="space-between">
-            <App.Text center size={24} weight={700} className={styles.modailTitle} sx={{textTransform: 'uppercase'}}>
-              Usługi {selected.title}
-            </App.Text>
+            <App.Flex column gap={8}>
+              <App.Text center size={24} weight={700} className={styles.modailTitle} sx={{textTransform: 'uppercase'}}>
+                Usługi {selected.title}
+              </App.Text>
+              
+              <App.Text size={12} weight={500} align="left">
+                *Minimalne zamówienie od 100 złotych
+              </App.Text>
+            </App.Flex>
 
             <App.Flex align="center" gap={8}>
               <App.Flex column align="flex-end">

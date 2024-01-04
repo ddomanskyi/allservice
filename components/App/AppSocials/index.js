@@ -40,13 +40,9 @@ function AppSocials({variant = null}) {
 
   return (
     <App.Flex gap={variant === 'modal' ? 4 : 16}>
-      {
-        variant !== 'modal' && variant !== 'hero'
-          ? <App.Flex className={classes()} onClick={() => handleClickSocial('facebook')} center>
-              <FacebookIcon width={variant === 'modal' ? 12 : null} height={variant === 'modal' ? 12 : null} />
-            </App.Flex>
-          : null
-      }
+      <App.Flex className={classes()} onClick={() => handleClickSocial('facebook')} center>
+        <FacebookIcon width={variant === 'modal' ? 12 : null} height={variant === 'modal' ? 12 : null} />
+      </App.Flex>
 
       <App.Flex className={classes()} onClick={() => handleClickSocial('whatsapp')} center>
         <WhatsAppIcon width={variant === 'modal' ? 12 : null} height={variant === 'modal' ? 12 : null} />

@@ -100,7 +100,15 @@ function Plans() {
                                 <App.Flex key={index} center className={styles.planItem} gap={4}>
                                   <CheckIcon color={item.additional ? 'success' : ''} />
                                   <App.Text size={16} center color={item.additional ? '#2e7d32' : "#1d1d1d"}>{item.title}</App.Text>
+                                  {/* <App.Flex column gap={4} sx={{position: 'absolute', bottom: 4}}>
+                                    {
+                                      index === 0
+                                        ? <App.Text size={11} center color="#1d1d1d">*nie dotyczy usług REMONTOWE</App.Text>
+                                        : null
+                                    }
+                                  </App.Flex> */}
                                 </App.Flex>
+                                
                               )
                             })
                           }
