@@ -24,8 +24,6 @@ export async function POST(req) {
         text: `Name: ${body.name} \n\n Phone number: ${body.phone} \n\n Message: \n${body.message}`
       }
 
-      console.log('mailOptions', mailOptions);
-
       let info = await transporter.sendMail(mailOptions)
       console.log('Email sent: ' + info.response)
 
